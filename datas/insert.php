@@ -7,12 +7,14 @@ define('PARAM_DBNAME','pdo_1');
 define('PARAM_CHARSET','UTF8');
 define('PARAM_USER','root');
 define('PARAM_PWD','');
-
+// Charge les dépendances (ici faker)
 require_once '../vendor/autoload.php';
-
+// On essaie 'try' des se connecter kà notre DB pdo_1
 try
+    // Activation d'une instance de PDO
 {
     $connexion = new PDO(PARAM_DB.':host='.PARAM_HOST.';port='.PARAM_PORT.';dbname='.PARAM_DBNAME.';charset='.PARAM_CHARSET, PARAM_USER, PARAM_PWD);
+    // Activation de l'eaffichage des erreurs
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(Exception $e)
