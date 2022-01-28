@@ -1,7 +1,7 @@
 <?php
 define('PARAM_DB', 'mysql'); // mysql => MySQL - MariaDB
 define('PARAM_HOST', 'localhost');
-define('PARAM_PORT', '3307');
+define('PARAM_PORT', '3306');
 define('PARAM_DBNAME', 'pdo_1');
 define('PARAM_CHARSET', 'UTF8');
 define('PARAM_USER', 'root');
